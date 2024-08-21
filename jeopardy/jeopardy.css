@@ -1,0 +1,142 @@
+/* color pallete
+  #2a3698
+  #28a200
+  rgb(172,38,113)
+  rgb(104,82,249)
+  rgb(246,81,76)
+  rgb(247,164,57)
+  rgb(49,109,194)
+  */
+
+  body {
+    font-family: 'Inconsolata', monospace;
+    background-color: #2a3698;
+    color: rgb(247, 164, 57);
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 3em;
+    color: white;
+    text-shadow: rgb(246, 81, 76) 2px 2px;
+  }
+  
+  #board {
+    width: 100%;
+    background-color: rgb(49, 109, 194);
+    vertical-align: center;
+    /* overflow-x: auto; */
+  }
+  
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    border: 8px solid #2a3698;
+    margin: auto;
+  }
+  
+  th {
+    background-color: rgb(38, 100, 189);
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: rgb(172, 38, 113) 1px 1px;
+    height: 4em;
+    color: white;
+    padding: 10px;
+  }
+  
+  td {
+    height: 100px;
+    width: 100px;
+    padding: 8px;
+    line-height: 1.4;
+  }
+  
+  td:after {
+    content: '\00A0';
+  }
+  
+  td:hover {
+    background-color: rgb(104, 82, 249);
+  }
+  
+  /* Center the loader */
+  #loader {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 50%;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #28a200;
+    border-right: 16px solid rgb(104, 82, 249);
+    border-bottom: 16px solid rgb(172, 38, 113);
+    border-left: 16px solid rgb(49, 109, 194);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% {
+      opacity: 1;
+      width: 50px;
+      height: 50px;
+      margin: 0 -40px;
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      width: 50px;
+      height: 50px;
+      margin: 0 -40px;
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      opacity: 1;
+      width: 50px;
+      height: 50px;
+      margin: 0 -40px;
+      transform: rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      width: 50px;
+      height: 50px;
+      margin: 0 -40px;
+      transform: rotate(360deg);
+    }
+  }
+  
+  #game {
+    display: none;
+    text-align: center;
+    margin: 50px;
+  }
+  
+  /* start and restart button styling */
+  #startGame,
+  #restartGame {
+    font-size: 20px;
+    color: rgb(104, 82, 249);
+    background: rgb(233, 233, 233);
+    padding: 0.3em;
+    margin: 1em;
+    border: 2px solid rgb(104, 82, 249);
+    border-radius: 16px;
+  }
+  
+  #startGame:hover,
+  #restartGame:hover {
+    background: rgb(247, 164, 57);
+    border: 2px solid rgb(247, 164, 57);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+  }
